@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>币安 Alpha 积分计算器</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="decorative-elements">
+        <div class="sphere sphere-orange-gold"></div>
+        <div class="sphere sphere-pink-gold"></div>
+        <div class="sphere sphere-dark-red"></div>
+        <div class="ring ring-left"></div>
+        <div class="ring ring-right"></div>
+        <div class="small-spheres">
+            <div class="small-sphere s1"></div>
+            <div class="small-sphere s2"></div>
+            <div class="small-sphere s3"></div>
+            <div class="small-sphere s4"></div>
+            <div class="small-sphere s5"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="title-wrapper">
+            <span class="title-part">币安</span>
+            <span class="title-part highlight">Alpha</span>
+            <span class="title-part">积分计算器</span>
+        </div>
+        
+        <div class="calculator-wrapper">
+            <div class="input-section">
+                <div class="input-row">
+                    <label for="balance">交易所总余额（美元）：</label>
+                    <div class="input-with-icon">
+                        <input type="number" id="balance" min="0" step="0.01" placeholder="请输入总余额">
+                        <span class="unit">$</span>
+                    </div>
+                </div>
+                <div class="input-row">
+                    <label for="tradingVolume">每日交易量（美元）：</label>
+                    <div class="input-with-icon">
+                        <input type="number" id="tradingVolume" min="0" step="0.01" placeholder="请输入交易量">
+                        <span class="unit">$</span>
+                    </div>
+                    <button id="calculate" class="pixel-button">计算</button>
+                </div>
+            </div>
+
+            <div class="results-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>交易所总余额</th>
+                            <th>余额积分</th>
+                            <th>当日交易量</th>
+                            <th>交易积分</th>
+                            <th>当日积分</th>
+                            <th>15天总积分</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="balanceDisplay">0.00</td>
+                            <td id="balancePoints">0</td>
+                            <td id="volumeDisplay">0.00</td>
+                            <td id="tradingPoints">0</td>
+                            <td id="dailyPoints">0</td>
+                            <td id="totalPoints">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="social-buttons">
+                <a href="https://accounts.marketwebb.io/register?ref=150622947" target="_blank" class="social-button">
+                    注册币安
+                </a>
+                <a href="https://x.com/YOYOMYOYOA" target="_blank" class="social-button">
+                    推特
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
