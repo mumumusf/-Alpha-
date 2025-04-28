@@ -76,6 +76,71 @@
                 </table>
             </div>
             
+            <div class="points-upgrade-calculator">
+                <h2 class="section-title">积分提升计算器</h2>
+                <div class="input-section">
+                    <div class="input-row">
+                        <label for="currentPoints">当前积分：</label>
+                        <div class="input-with-icon">
+                            <input type="number" id="currentPoints" min="0" step="1" placeholder="请输入当前积分">
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <label for="targetPoints">目标积分：</label>
+                        <div class="input-with-icon">
+                            <input type="number" id="targetPoints" min="0" step="1" placeholder="请输入目标积分">
+                        </div>
+                        <button id="calculateUpgrade" class="pixel-button">计算提升方案</button>
+                    </div>
+                </div>
+                
+                <div class="upgrade-results">
+                    <h3>提升方案</h3>
+                    <div class="upgrade-options">
+                        <div class="upgrade-option">
+                            <h4>方案一：增加余额</h4>
+                            <p id="balanceUpgradeResult">请输入当前积分和目标积分</p>
+                        </div>
+                        <div class="upgrade-option">
+                            <h4>方案二：增加交易量</h4>
+                            <p id="volumeUpgradeResult">请输入当前积分和目标积分</p>
+                        </div>
+                        <div class="upgrade-option">
+                            <h4>方案三：同时增加余额和交易量</h4>
+                            <p id="combinedUpgradeResult">请输入当前积分和目标积分</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fund-allocation-calculator">
+                <h2 class="section-title">资金分配计算器</h2>
+                <div class="input-section">
+                    <div class="input-row">
+                        <label for="availableFunds">可用资金（美元）：</label>
+                        <div class="input-with-icon">
+                            <input type="number" id="availableFunds" min="0" step="100" placeholder="请输入可用资金">
+                            <span class="unit">$</span>
+                        </div>
+                        <button id="calculateAllocation" class="pixel-button">计算最优分配</button>
+                    </div>
+                </div>
+                
+                <div class="allocation-results">
+                    <h3>资金分配方案</h3>
+                    <div class="allocation-options">
+                        <div class="allocation-option">
+                            <h4>最优分配方案</h4>
+                            <p id="optimalAllocationResult">请输入可用资金</p>
+                        </div>
+                        <div class="allocation-option">
+                            <h4>积分收益分析</h4>
+                            <p id="pointsAnalysisResult">请输入可用资金</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="social-buttons">
                 <a href="https://accounts.marketwebb.io/register?ref=150622947" target="_blank" class="social-button">
                     注册币安
